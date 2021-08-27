@@ -1,7 +1,7 @@
 public enum CabinCrewType {
     CAPTAIN("Sergio", "Captain"),
     COPILOT("Simon", "Copilot"),
-    FIRSTOFFICE("Lilith", "First Officer"),
+    FIRSTOFFICER("Lilith", "First Officer"),
     FLIGHTATTENDANT("Victor", "Flightattendant"),
     PURSER("Gimme ur purse", "Purser");
 
@@ -14,7 +14,7 @@ public enum CabinCrewType {
     }
     public String getName(){
 
-        return this.name;
+        return name;
     }
 
     public String getRank() {
