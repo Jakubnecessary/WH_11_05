@@ -1,12 +1,29 @@
 public class Plane {
-    private int planeCapacity;
 
-    public Plane(int capacity) {
-        this.planeCapacity= capacity;
+    private PlaneType type;
+    private int capacity;
+    private double weight;
+
+    public Plane(PlaneType planeType, int capacity, double weight) {
+        this.weight = weight;
+        this.type = planeType;
+        this.capacity = capacity;
+
     }
 
 
-    public int getPlaneCapacity() {
-        return planeCapacity;
+
+    public int getCapacity() {
+        return capacity;
     }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public PlaneType getType() {
+        return type;
+    }
+
+
 }

@@ -1,28 +1,26 @@
 public enum PlaneType {
-
-    BOEING767("Boeing 767", "500", "20000");
-
-
-    private final String model;
-    private final String capacity;
-    private final String totalWeight;
+    BOEING787("Boeing 787", 150000.00, 5327 );
 
 
-    PlaneType(String model, String capacity, String totalWeight ){
-        this.model = model;
+    private final String type;
+    private final Double weight;
+    private final int capacity;
+
+    PlaneType(String type, Double weight, int capacity){
+        this.type = type;
+        this.weight = weight;
         this.capacity = capacity;
-        this.totalWeight = totalWeight;
     }
 
-    public String getModel() {
-        return model;
+    public String getType(){
+        return type;
     }
 
-    public String getCapacity() {
-        return capacity;
+    public Double getWeight() {
+        return weight;
     }
 
-    public String getTotalWeight() {
-        return totalWeight;
-    }
+    public int getCapacity() {
+        return capacity;}
 }
+
