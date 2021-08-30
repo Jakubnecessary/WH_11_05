@@ -1,23 +1,64 @@
 import java.util.ArrayList;
 
-public class Flight extends Pilot {
+public class Flight extends Pilot{
 
-    private String flightNum;
+    private Plane plane;
+    private Pilot pilot;
+
+    private String flightNumber;
     private String destination;
-    private String departureAirport;
-    private String departureTime;
-    private ArrayList<String>passengers;
-    private ArrayList<Integer>CabinCrewMembers;
-    
+    private String destinationAirport;
+    public String deptTime;
+    private ArrayList<Passenger>passengers;
 
 
-    public Flight(String name, String rank, String pilotLicenseNum, String flightNum , String destination, String departureAirport, String departureTime) {
-        super(name, rank, pilotLicenseNum);
-        this.flightNum = flightNum;
+
+    public Flight(Plane plane, String flightNumber, String destination, String destinationAirport, String deptTime, Pilot pilot){
+        super("Sergio","Pilot","BLD200");
+        this.pilot = pilot;
+        this.plane = plane;
+        this.flightNumber = flightNumber;
         this.destination = destination;
-        this.departureAirport = departureAirport;
-        this.departureTime = departureTime;
+        this.destinationAirport = destinationAirport;
         this.passengers = new ArrayList<>();
-        this.CabinCrewMembers = new ArrayList<>(5);
+        this.deptTime = deptTime;
     }
+    public Plane getPlane(){
+        return plane;
+    }
+
+    public String getFlightNumber(){
+        return flightNumber;
+    }
+
+    public String getDestination() {return destination;}
+
+
+    public String getDestinationAirport() {
+        return destinationAirport;
+    }
+
+    public String getDeptTime(){
+        return deptTime;
+    }
+
+    public Pilot getPilot(){
+        return pilot;
+    }
+
+    public ArrayList<Passenger> getPassengers(){
+        return passengers;
+    }
+
+    public int getNumberOfPassengers(){
+        return passengers.size();
+    }
+
+    public void addPassenger(Passenger passenger) {
+        if (plane.getCapacity() > 0) {
+            passengers.add(passenger);
+        }
+    }
+
+
 }
